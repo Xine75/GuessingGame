@@ -10,12 +10,13 @@ namespace GuessingGame
 
             Console.WriteLine("Hello! Want to have some fun? Guess my secret number!");
 
-            string question = "What's your guess?";
+            string question = "What's your guess, dummy?";
 
             int num = 0;
+            while (num < 4)
             {
-                while (num < 4)
-                    Console.Write($"{question}: ");
+
+                Console.Write($"{question}: ");
                 string answer = Console.ReadLine();
 
                 if (answer != secretNumber)
@@ -26,7 +27,7 @@ namespace GuessingGame
                 else if (answer == secretNumber)
                 {
                     Console.WriteLine($"Ding Dong! You got it, dummy!");
-
+                    return;
                 }
 
 
